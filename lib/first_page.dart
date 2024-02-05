@@ -37,7 +37,7 @@ class FirstPage extends StatelessWidget {
                     ),
                   );
                 },
-                child: const Text("次の画面へ"),
+                child: const Text("Second Pageへ"),
               ),
             ],
           ),

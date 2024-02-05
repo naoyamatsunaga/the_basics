@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:the_basics/list_page.dart';
 
 class SecondPage extends StatelessWidget {
   // コンストラクタ
@@ -28,9 +29,14 @@ class SecondPage extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 // ボタンを押した時の処理を書く
-                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ListPage(),
+                  ),
+                );
               },
-              child: const Text("前の画面へ"),
+              child: const Text("List Pageへ"),
             ),
           ],
         ),
