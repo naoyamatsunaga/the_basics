@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:the_basics/second_page.dart';
 
 class FirstPage extends StatelessWidget {
+  //変数
   String nameText = "";
 
   @override
@@ -17,6 +18,10 @@ class FirstPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              // 画像を表示
+              Image.network(
+                  'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg'),
+              // 入力欄を追加
               TextField(
                 onChanged: (text) {
                   nameText = text;
