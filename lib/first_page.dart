@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:the_basics/second_page.dart';
 
 class FirstPage extends StatelessWidget {
+  String nameText = "";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,18 +12,30 @@ class FirstPage extends StatelessWidget {
         title: const Text("First Page"),
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            // ボタンを押した時の処理を書く
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => SecondPage(),
-                fullscreenDialog: true,
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              TextField(
+                onChanged: (text) {
+                  nameText = text;
+                },
               ),
-            );
-          },
-          child: const Text("次の画面へ"),
+              ElevatedButton(
+                onPressed: () {
+                  // ボタンを押した時の処理を書く
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SecondPage(nameText),
+                    ),
+                  );
+                },
+                child: const Text("次の画面へ"),
+              ),
+            ],
+          ),
         ),
       ),
     );
