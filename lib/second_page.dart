@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:the_basics/list_page.dart';
+import 'package:the_basics/youtube_trace.dart';
 
 class SecondPage extends StatelessWidget {
   // コンストラクタ
@@ -26,17 +27,34 @@ class SecondPage extends StatelessWidget {
                 fontSize: 50,
               ),
             ),
-            ElevatedButton(
-              onPressed: () {
-                // ボタンを押した時の処理を書く
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => ListPage(),
-                  ),
-                );
-              },
-              child: const Text("List Pageへ"),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    // ボタンを押した時の処理を書く
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ListPage(),
+                      ),
+                    );
+                  },
+                  child: const Text("List Pageへ"),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    // ボタンを押した時の処理を書く
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => YoutubeTrace(),
+                      ),
+                    );
+                  },
+                  child: const Text("YoutubeTraceへ"),
+                ),
+              ],
             ),
           ],
         ),
