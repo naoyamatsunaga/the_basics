@@ -4,6 +4,7 @@
 
 ## Images
 画面イメージ
+<img src="画像のURL" width="20%" />
 
 ## Usage
 簡単な使い方
